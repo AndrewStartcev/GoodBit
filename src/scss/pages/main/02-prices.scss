@@ -1,0 +1,141 @@
+.prices {
+	margin: 170px 0 120px;
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px 30px;
+		align-items: stretch;
+		justify-content: flex-start;
+	}
+
+	&__title {
+		flex: 0 0 calc(387px - 20px);
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		font-weight: 700;
+		font-size: 45px;
+		line-height: 120.3%;
+		text-transform: uppercase;
+	}
+
+	&__card {
+		flex: 0 0 calc(387px - 20px);
+	}
+}
+.price-card {
+	background: #ffffff;
+	box-shadow: 0px 4px 11px rgba(33, 30, 52, 0.25);
+	border-radius: 5px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	&__label {
+		width: 100%;
+		display: block;
+		clip-path: polygon(100% 0%, 96% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+		background: #211e34;
+		border-radius: 5px;
+		padding: 15px;
+		padding-right: 25px;
+		font-weight: 700;
+		font-size: 27px;
+		line-height: 120.3%;
+		color: #ffffff;
+		transform: translateX(-31px);
+	}
+
+	&__summ {
+		margin: 0;
+		margin-top: 15px;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 120.3%;
+		color: rgba(30, 30, 30, 0.5);
+	}
+
+	&__text {
+		color: rgba(30, 30, 30, 0.8);
+	}
+
+	&__btn {
+		margin: 0;
+		padding: 0;
+		margin-top: auto;
+		margin-left: auto;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 120.3%;
+		text-align: right;
+	}
+}
+
+@include media-tablet-horizontal {
+	.prices {
+		margin: 150px 0 60px;
+		&__wrapper {
+			gap: 20px 15px;
+		}
+
+		&__title {
+			flex: 0 0 calc(50% - 20px);
+		}
+
+		&__card {
+			flex: 0 0 calc(50% - 20px);
+		}
+	}
+	.price-card {
+		&__label {
+			transform: translateX(-25px);
+		}
+	}
+}
+@include media-mobile-horizontal {
+	.prices {
+		margin: 120px 0 60px;
+		&__wrapper {
+			gap: 20px 15px;
+		}
+
+		&__title {
+			flex: 0 0 100%;
+			font-size: 20px;
+			line-height: 120.3%;
+			text-align: center;
+			justify-content: center;
+		}
+
+		&__card {
+			flex: 0 0 100%;
+		}
+	}
+
+	.price-card {
+		padding: 15px 10px;
+		&__label {
+			transform: translateX(-15px);
+			padding: 8px 15px;
+			padding-right: 25px;
+			font-size: 18px;
+		}
+
+		&__summ {
+			margin: 0;
+			margin-top: 10px;
+			font-size: 18px;
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+
+		&__btn {
+			justify-content: flex-end;
+			margin-top: 30px;
+			font-size: 16px;
+		}
+	}
+}

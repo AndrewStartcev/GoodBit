@@ -1,0 +1,273 @@
+.hero-screen {
+	color: #ffffff;
+	background: #211e34 url('../img/background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-bottom: 100px;
+	&__wrapper {
+		padding: 40px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex: 0 0 552px;
+		padding: 50px 0 30px;
+		h1 {
+			margin: 0;
+			padding: 0;
+			font-weight: 500;
+			font-size: 30px;
+			line-height: 176.8%;
+			span {
+				background: #fe4b4b;
+				border-radius: 5px;
+				padding: 3px 5px;
+			}
+		}
+	}
+
+	&__btn {
+		margin-top: 60px;
+	}
+
+	&__image {
+		max-width: 630px;
+		img {
+			max-width: 100%;
+			width: auto;
+			height: auto;
+		}
+	}
+	&__gift {
+		margin-top: auto;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 20px;
+		p {
+			margin: 0;
+			padding: 0;
+			max-width: 330px;
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 143.3%;
+		}
+	}
+}
+
+.hero-features {
+	transform: translateY(100px);
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 30px;
+	}
+	&__card {
+		position: relative;
+		background: #ffffff;
+		color: #1e1e1e;
+		box-shadow: 0px 4px 11px rgba(33, 30, 52, 0.25);
+		border-radius: 5px;
+		padding: 18px 12px;
+		padding-top: 77px;
+	}
+
+	&__icon {
+		position: absolute;
+		top: -6px;
+		left: 12px;
+		width: 55px;
+		height: 68px;
+		background: url('../img/bookmark.svg') center center / contain no-repeat;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+		h2 {
+			margin: 0;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 120.3%;
+		}
+		p {
+			margin: 0;
+			margin-top: 10px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 138.8%;
+			color: rgba(30, 30, 30, 0.8);
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.hero-screen {
+		margin-bottom: 90px;
+		&__wrapper {
+			position: relative;
+			padding: 57px 0 0px;
+		}
+
+		&__content {
+			padding: 0;
+			flex: 0 0 522px;
+			h1 {
+				font-size: 28px;
+			}
+		}
+
+		&__btn {
+			margin-top: 80px;
+		}
+
+		&__image {
+			position: absolute;
+			top: 78px;
+			left: 270px;
+			width: 660px;
+		}
+		&__gift {
+			margin-top: 135px;
+		}
+	}
+	.hero-features {
+		transform: translateY(90px);
+		&__wrapper {
+			flex-wrap: wrap;
+			gap: 15px;
+		}
+		&__slide {
+			flex: 0 0 calc(50% - 10px);
+		}
+		&__card {
+			position: relative;
+			background: #ffffff;
+			color: #1e1e1e;
+			box-shadow: 0px 4px 11px rgba(33, 30, 52, 0.25);
+			border-radius: 5px;
+			padding: 18px 12px;
+			padding-top: 77px;
+		}
+
+		&__icon {
+			position: absolute;
+			top: -6px;
+			left: 12px;
+			width: 55px;
+			height: 68px;
+			background: url('../img/bookmark.svg') center center / contain no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__content {
+			h2 {
+				margin: 0;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: 120.3%;
+			}
+			p {
+				margin: 0;
+				margin-top: 10px;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 138.8%;
+				color: rgba(30, 30, 30, 0.8);
+			}
+		}
+	}
+}
+@include media-mobile-horizontal {
+	.hero-screen {
+		margin-bottom: 0;
+		padding-bottom: 0px;
+		&__wrapper {
+			position: relative;
+			padding: 30px 0 0px;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__content {
+			flex: 0 0 auto;
+			align-items: center;
+			max-width: 90%;
+			h1 {
+				font-size: 20px;
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			margin-top: 30px;
+			order: 1;
+		}
+
+		&__image {
+			position: relative;
+			top: auto;
+			left: auto;
+			margin-top: 30px;
+			max-width: 660px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: auto;
+		}
+		&__gift {
+			max-width: 300px;
+			margin-top: 20px;
+			gap: 15px;
+			p {
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 143.3%;
+			}
+		}
+	}
+	.hero-features {
+		.swiper-pagination {
+			bottom: -30px;
+			top: auto;
+			.swiper-pagination-bullet {
+				width: 10px;
+				height: 10px;
+				background: rgba(254, 75, 75, 1);
+			}
+		}
+		&__wrapper {
+			flex-wrap: nowrap;
+			gap: 0px;
+			align-items: stretch;
+		}
+		&__slide {
+			width: 100%;
+			height: auto;
+			flex: 0 0 100%;
+		}
+		&__card {
+			height: 100%;
+		}
+
+		&__content {
+			h2 {
+				font-size: 18px;
+			}
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+}

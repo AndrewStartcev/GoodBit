@@ -1,0 +1,15 @@
+@import 'utils/variables';
+@import 'mixins/media';
+
+@import 'utils/fonts';
+
+@import 'common/global';
+
+@import 'common/header';
+
+@import 'common/popup';
+
+@import 'common/footer';
+
+@import 'pages/main/01-hero.scss';
+@import 'pages/main/02-prices.scss';
