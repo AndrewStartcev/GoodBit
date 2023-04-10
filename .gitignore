@@ -1,7 +1,7 @@
 # Игнорируемые файлы и директории
 node_modules/
 dist/
-public/
+#public/
 
 # Файлы операционных систем
 .DS_Store
