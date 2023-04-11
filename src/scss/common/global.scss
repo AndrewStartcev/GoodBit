@@ -42,8 +42,12 @@ body {
 }
 
 .main-page {
+	padding-top: 90px;
 	flex: 1;
 	overflow: hidden;
+	@include media-mobile-horizontal {
+		padding-top: 77px;
+	}
 }
 
 .container {
