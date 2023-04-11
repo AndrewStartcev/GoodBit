@@ -119,6 +119,24 @@
 				color: #fe4b4b;
 			}
 		}
+		&.menu-item-has-children {
+			a {
+				position: relative;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				&::after {
+					content: '';
+					display: block;
+					width: 18px;
+					height: 18px;
+					margin-left: 5px;
+					background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.0679688 0.578906L0.110156 0.628125L3.29766 4.29609C3.40547 4.42031 3.56719 4.49766 3.74766 4.49766C3.92812 4.49766 4.08984 4.41797 4.19766 4.29609L7.38281 0.635156L7.43672 0.574219C7.47656 0.515625 7.5 0.445313 7.5 0.370313C7.5 0.166406 7.32656 0 7.11094 0H0.389062C0.173437 0 0 0.166406 0 0.370313C0 0.447656 0.0257813 0.520312 0.0679688 0.578906Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A");
+					background-repeat: no-repeat;
+					background-position: center center;
+				}
+			}
+		}
 		.sub-menu {
 			list-style: none;
 			display: none;
