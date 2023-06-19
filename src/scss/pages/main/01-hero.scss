@@ -1,9 +1,6 @@
 .hero-screen {
 	color: #ffffff;
-	background: #211e34 url('../img/background.jpg');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
+	background: #211e34 url('../img/background.jpg') center center / cover no-repeat;
 	margin-bottom: 100px;
 	&__wrapper {
 		padding: 40px 0;

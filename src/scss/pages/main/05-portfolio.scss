@@ -1,0 +1,177 @@
+.portfolio {
+	color: #ffffff;
+	background: #211e34 url('../img/background_2.jpg') center center / cover no-repeat;
+	padding: 80px 0;
+	&__title {
+		margin: 0;
+		padding: 0;
+		font-weight: 700;
+		font-size: 45px;
+		line-height: 120.3%;
+		text-align: center;
+	}
+
+	&__wrapper {
+		margin-top: 40px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&__footer {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.portfolio-card {
+	flex: 0 0 calc(33.333% - 20px);
+	&__cover {
+		width: 100%;
+		.ios-bar {
+			display: block;
+			position: relative;
+			&::after {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 38px;
+				background: url('../img/ios_bar.svg') center center / contain no-repeat;
+				border-radius: 5px 5px 0 0;
+			}
+			span {
+				width: 100%;
+				display: block;
+				position: relative;
+				z-index: 1;
+				padding: 13px 10px 10px 58px;
+				text-align: center;
+				font-weight: 500;
+				font-size: 10px;
+				line-height: 120.3%;
+				color: #393939;
+			}
+		}
+		img,
+		picture {
+			width: 100%;
+			height: 234px;
+			object-fit: cover;
+			border-radius: 0px 0px 5px 5px;
+			object-position: top;
+		}
+	}
+
+	&__content {
+		display: block;
+		color: #fff;
+		margin-top: 16px;
+	}
+
+	&__name {
+		display: block;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 120.3%;
+		transition: all 0.5s ease;
+	}
+
+	&__text {
+		display: block;
+		margin-top: 12px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 120.3%;
+		opacity: 0.5;
+		transition: all 0.5s ease;
+	}
+	&:hover {
+		.portfolio-card {
+			&__name {
+				color: #fe4b4b;
+			}
+			&__text {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.portfolio-card {
+		flex: 0 0 calc(50% - 20px);
+		&__cover {
+			.ios-bar {
+				&::after {
+					height: 36px;
+					background: url('../img/ios_bar.svg') center center / cover no-repeat;
+				}
+			}
+			img,
+			picture {
+				height: 270px;
+			}
+		}
+	}
+}
+
+@include media-mobile-horizontal {
+	.portfolio {
+		padding: 60px 0;
+		&__title {
+			font-size: 20px;
+		}
+
+		&__wrapper {
+			margin-top: 30px;
+			gap: 20px;
+		}
+
+		&__footer {
+			margin-top: 40px;
+		}
+		&__btn {
+			width: 85%;
+		}
+	}
+	.portfolio-card {
+		&__cover {
+			.ios-bar {
+				display: none;
+			}
+			img,
+			picture {
+				height: 180px;
+				border-radius: 5px;
+			}
+		}
+		&__name {
+			font-size: 16px;
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+@include media-mobile {
+	.portfolio-card {
+		flex: 0 0 100%;
+		&__cover {
+			img,
+			picture {
+				height: 190px;
+				border-radius: 5px;
+			}
+		}
+	}
+}

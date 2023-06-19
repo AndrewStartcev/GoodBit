@@ -110,7 +110,8 @@
 		}
 
 		&__card {
-			flex: 0 0 320px;
+			flex: 0 0 auto;
+			max-width: 100%;
 		}
 	}
 
@@ -134,8 +135,10 @@
 		}
 
 		&__btn {
-			justify-content: flex-end;
-			margin-top: 30px;
+			justify-content: center;
+			text-align: center;
+			width: 100%;
+			margin-top: 20px;
 			font-size: 16px;
 		}
 	}

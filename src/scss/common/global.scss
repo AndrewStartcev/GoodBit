@@ -87,6 +87,8 @@ body {
 		transform: translateX(-4em) skewX(-45deg);
 	}
 	&:hover {
+		opacity: 1;
+		color: #fff;
 		&:before {
 			animation: move-light 0.5s;
 		}
