@@ -32,3 +32,29 @@ burgerButton.addEventListener('click', function () {
   burgerButton.classList.toggle('active');
   menu.classList.toggle('menu--active');
 });
+
+const feedbasksSlider = document.querySelector('.feedbacks__slider');
+
+if (feedbasksSlider != null) {
+  new Swiper(feedbasksSlider, {
+    spaceBetween: 15,
+    slidesPerView: 1,
+
+    pagination: {
+      el: '.feedbacks__pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: "auto",
+        spaceBetween: 25
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
+    }
+  });
+}
