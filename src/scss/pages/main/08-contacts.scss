@@ -1,0 +1,169 @@
+.contacts {
+	padding: 120px 0 85px;
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 50px;
+	}
+
+	&__body {
+		flex: 0 0 auto;
+		max-width: 530px;
+	}
+
+	&__title {
+		margin: 0;
+		font-weight: 700;
+		font-size: 35px;
+		line-height: 120.3%;
+		margin-bottom: 25px;
+	}
+
+	&__office {
+		margin-top: 30px;
+		font-size: 20px;
+		line-height: 138.8%;
+	}
+
+	&__price {
+		display: block;
+		margin-top: 20px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 138.8%;
+	}
+
+	&__socials {
+		margin-top: 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__social {
+		display: block;
+		width: 45px;
+		height: 45px;
+		background: #211e34;
+		border-radius: 5px;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&__map {
+		flex: 0 0 auto;
+		max-width: 610px;
+		width: 100%;
+		iframe {
+			border-radius: 5px;
+			overflow: hidden;
+		}
+	}
+}
+
+.contacts-card {
+	margin-bottom: 20px;
+	&__label {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 138.8%;
+	}
+
+	&__row {
+		margin-top: 10px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 20px 30px;
+		flex-wrap: wrap;
+		a {
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 120.3%;
+			color: #211e34;
+			&:hover {
+				color: #fe4b4b;
+			}
+		}
+	}
+}
+
+@include media-tablet-horizontal {
+	.contacts {
+		padding: 60px 0;
+		&__wrapper {
+			flex-direction: column;
+			gap: 35px;
+		}
+
+		&__map {
+			flex: 0 0 auto;
+			max-width: 100%;
+			width: 100%;
+			height: 330px;
+		}
+	}
+}
+
+@include media-mobile-horizontal {
+	.contacts {
+		padding: 60px 0;
+		&__wrapper {
+			flex-direction: column;
+			gap: 35px;
+		}
+
+		&__body {
+			flex: 0 0 auto;
+			max-width: 530px;
+		}
+
+		&__title {
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+
+		&__office {
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		&__price {
+			margin-top: 10px;
+			font-size: 16px;
+		}
+
+		&__socials {
+			margin-top: 10px;
+		}
+
+		&__social {
+			width: 35px;
+			height: 35px;
+		}
+
+		&__map {
+			height: 190px;
+		}
+	}
+
+	.contacts-card {
+		margin-bottom: 15px;
+		&__label {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 138.8%;
+		}
+
+		&__row {
+			margin-top: 5px;
+			gap: 10px;
+			a {
+				font-size: 14px;
+			}
+		}
+	}
+}
