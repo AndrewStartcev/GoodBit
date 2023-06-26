@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Профессиональный сайт за 10 днейСкидка 15% на разработку сайта</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
               Профессиональный сайт <span>за&nbsp;10&nbsp;дней</span>
               cкидка <span>15%</span> на&nbsp;разработку сайта
             </h1>
-            <button class="btn hero-screen__btn">Оставить заявку</button>
+            <button class="btn hero-screen__btn" data-popup="#orderPopup">Оставить заявку</button>
 
             <div class="hero-screen__gift">
               <img src="img/gift.svg" alt="">
@@ -109,6 +109,8 @@
   </main>
 
   @@include("chunk/footer.html")
+  @@include("chunk/popup.html")
+
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>

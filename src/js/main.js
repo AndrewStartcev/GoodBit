@@ -1,3 +1,60 @@
+// Функция для открытия всплывающего окна
+function openPopup(popupId) {
+  closeAllPopups();
+
+  var popup = document.querySelector(popupId);
+  var popupBody = popup.querySelector('.popup__body');
+
+  popup.classList.add('show');
+  document.body.classList.add('no-scroll');
+
+  popup.addEventListener('click', function (event) {
+    if (!popupBody.contains(event.target)) {
+      closePopup(popup);
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closePopup(popup);
+    }
+  });
+}
+
+function closePopup(popup) {
+  popup.classList.remove('show');
+
+  if (document.querySelectorAll('.popup.show').length === 0) {
+    document.body.classList.remove('no-scroll');
+  }
+}
+
+function closeAllPopups() {
+  var popups = document.querySelectorAll('.popup');
+  for (var i = 0; i < popups.length; i++) {
+    closePopup(popups[i]);
+  }
+}
+
+var buttons = document.querySelectorAll('[data-popup], [data-close-popup]');
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', function (event) {
+    event.preventDefault();
+
+    if (this.hasAttribute('data-popup')) {
+      var popupId = this.getAttribute('data-popup');
+      openPopup(popupId);
+    }
+
+    if (this.hasAttribute('data-close-popup')) {
+      var popup = this.closest('.popup');
+      closePopup(popup);
+    }
+  });
+}
+
+
 import { handleHeroResize } from './modules/hero-swiper.js';
 
 window.addEventListener('load', handleHeroResize);

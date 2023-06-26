@@ -121,3 +121,7 @@ body {
 		transform: translateX(25em) skewX(-45deg);
 	}
 }
+
+.no-scroll {
+	overflow: hidden;
+}

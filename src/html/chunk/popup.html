@@ -1,0 +1,52 @@
+<!-- Задать вопрос -->
+<div class="popup" id="orderPopup">
+  <div class="popup__content">
+    <div class="popup__body">
+      <button class="popup__close" data-close-popup></button>
+      <h2 class="popup__title">Заполните форму</h2>
+      <p class="popup__description">Наш специалист свяжется с вами в ближайшее время</p>
+      <div class="popup__form form">
+        <form action="">
+          <div class="form-item">
+            <input type="text" name="user-name" placeholder="Ваше имя" required>
+          </div>
+          <div class="form-item">
+            <input type="tel" name="user-tel" placeholder="Номер телефона" inputmode="tel" required>
+          </div>
+          <div class="form-item">
+            <label class="form-item__label">Выберите способ связи:</label>
+            <div class="form-item__group">
+              <div class="form-item__column">
+                <label class="radio">
+                  <input type="radio" name="user-config" value="Позвонить" checked>
+                  <span class="radio__icon"></span>
+                  <span class="radio__name">Позвонить</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="user-config" value="Написать SMS">
+                  <span class="radio__icon"></span>
+                  <span class="radio__name">Написать SMS</span>
+                </label>
+              </div>
+              <div class="form-item__column">
+                <label class="radio">
+                  <input type="radio" name="user-config" value="Написать в Telegram">
+                  <span class="radio__icon"></span>
+                  <span class="radio__name">Написать в Telegram</span>
+                </label>
+                <label class="radio">
+                  <input type="radio" name="user-config" value="Написать в WhatsApp">
+                  <span class="radio__icon"></span>
+                  <span class="radio__name">Написать в WhatsApp</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <input type="submit" class="btn" value="Отправить">
+        </form>
+        <p class="popup__footer">Нажимая на кнопку, вы даете согласие на обработку персональных данных</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.Задать вопрос -->
