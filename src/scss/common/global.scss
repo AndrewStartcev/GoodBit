@@ -29,6 +29,7 @@ button {
 }
 
 body {
+	background: #fbfbff;
 	color: #211e34;
 	font-size: 16px;
 	font-weight: 400;
@@ -45,6 +46,15 @@ body {
 	padding-top: 90px;
 	flex: 1;
 	overflow: hidden;
+	&__two-level {
+		padding-top: 40px;
+		@include media-tablet-horizontal {
+			margin-top: 20px;
+		}
+		@include media-mobile-horizontal {
+			margin-top: 15px;
+		}
+	}
 	@include media-mobile-horizontal {
 		padding-top: 77px;
 	}
@@ -124,4 +134,74 @@ body {
 
 .no-scroll {
 	overflow: hidden;
+}
+
+.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	list-style-type: none;
+	gap: 10px;
+	&__item {
+		position: relative;
+		font-size: 14px;
+		line-height: 120.3%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 10px;
+		@include media-mobile-horizontal {
+			font-size: 12px;
+		}
+		a {
+			color: #1e1e1e;
+		}
+		span {
+			color: rgba(30, 30, 30, 0.8);
+		}
+		&::after {
+			content: '»';
+			display: inline-flex;
+		}
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+	}
+}
+
+.pagination {
+	display: flex;
+	justify-content: flex-end;
+	align-items: stretch;
+	gap: 10px;
+	@include media-mobile-horizontal {
+		justify-content: center;
+	}
+	a {
+		color: #343745;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 120.3%;
+		width: 40px;
+		height: 40px;
+		padding: 5px;
+		border-radius: 8px;
+		background: #f1f4ff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		&:hover {
+			background: rgba(#fe4b4b, 0.3);
+		}
+		&.active {
+			background: #fe4b4b;
+			color: white;
+		}
+	}
 }
